@@ -1,0 +1,18 @@
+// Definir variables de color
+$color-fondo: #343a40;
+$color-texto: #ffffff;
+$color-hover: #007bff;
+
+// Estilos para el navbar
+.navbar {
+    background-color: $color-fondo;
+}
+
+// Estilos para los enlaces del navbar
+.nav-link {
+    color: $color-texto;
+    // Definir estilos de hover
+    &:hover {
+        color: $color-hover;
+    }
+}

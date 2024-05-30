@@ -1,48 +1,54 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Proyecto</title>
+    <title>Tu Nombre - Portafolio</title>
     <!-- Incluye los estilos de Bootstrap -->
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="bg-black color-white">
-    <header class="d-flex justify-content-center py-3">
-        <ul class="nav nav-pills rounded-5 bg-white">
-          <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+    <header class="d-flex justify-content-center py-3 bg-light">
+        <ul class="nav nav-pills rounded-5 bg-dark my-1">
+          <li class="nav-item "><a href="#" class="nav-link color-white"> <i class="bi bi-rocket-takeoff"></i> Boost</a></li>
+          <li class="nav-item "><a href="#" class="nav-link color-white"> <i class="bi bi-cash-coin"></i> Plans </a></li> 
+          <li class="nav-item "><a href="#" class="nav-link color-white"> <i class="bi bi-person-hearts"></i> Reviews</a></li>
+          <li class="nav-item "><a href="#about" class="nav-link color-white"> <i class="bi bi-person-circle"></i> About</a></li>
         </ul>
     </header>
-    <section class="m-1 p-5 bg-white rounded-5"> 
-        <div class="px-4 py-5 my-5 text-center">
-            <i class="bi-alarm fs-1 display-1" ></i>
-            <h1 class="display-5 fw-bold text-body-emphasis">Centered Title Hero</h1>
-            <div class="col-lg-6 mx-auto">
-                <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+    <section class="m-0 p-5 bg-light rounded-5 rounded-top-0"> 
+        <div class="px-4 text-center py-5">
+            <i class="bi bi-award" style="font-size: 5rem;"></i>
+            <div class="container ">
+                <h1 class="display-4 fw-bold text-body-emphasis ">Elite designs, Guaranteed Success.</h1>
+            </div>
+            <div class="col-lg-8 mx-auto">
+                <p class="lead mb-4">Elevate your digital presence with elite designs guaranteed to drive success. Our expertly crafted websites combine cutting-edge aesthetics with seamless functionality, ensuring your brand stands out in today's competitive landscape. Trust in our expertise to amplify your online presence and unlock your business's full potential.</p>
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <form action="aun no se decide que accion" class="d-block">
-                    <input class="form-control border border-5 border-dark-subtle rounded-5" type="text" id="url">
-                    <label for="url" class="form-label">Try Now ! With your website url.</label>
-                </form>
+                    <form id="searchForm">
+                        <div class="input-group border border-5 border-dark-subtle rounded-5">
+                            <input class="form-control" type="text" id="url">
+                            <button id="searchBtn" class="btn" type="submit" aria-label="submit">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                        <label for="url" class="form-label mt-2">Try Now! With your website url.</label>
+                    </form>                    
                 </div>
             </div>
         </div>
     </section>
-    <section class=" p-5">
+    <section id="about" class=" p-5">
         <div class="container">
             <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-              <h1 class="display-4 fw-normal text-white">Pricing</h1>
-              <p class="fs-5 text-secondary">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>
+              <h1 class="display-4 fw-normal text-white">Acerca de</h1>
+              <p class="fs-5 text-secondary">Soy un diseñador web con más de 7 años de experiencia, especializado en UX/UI, desarrollo front-end y diseño de productos.</p>
             </div>
         </div>
     </section>
-    <main class="container">
+    <main class="container p-5 bg-">
         <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
           <div class="col">
             <div class="card mb-4 rounded-3 shadow-sm">
@@ -96,23 +102,85 @@
             </div>
           </div>
         </div>
-      </main>
+    </main>
+    <section class="p-5">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+                <div class="col d-flex align-items-start">
+                  <svg class="bi me-3" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
+                  <div>
+                    <h3 class="fw-bold mb-0 fs-4 text-white">John Smith</h3>
+                    <p class="text-light">"Rafael hizo un trabajo excepcional en nuestro proyecto. Su enfoque meticuloso y creativo nos impresionó a todos. ¡Altamente recomendado!"</p>
+                  </div>
+                </div>
+                <div class="col d-flex align-items-start">
+                    <svg class="bi me-3" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
+                    <div>
+                      <h3 class="fw-bold mb-0 fs-4 text-white">Emily Johnson</h3>
+                      <p class="text-light">"¡Increíble trabajo de diseño! Rafael superó nuestras expectativas en todos los sentidos. Profesional, amigable y altamente competente."</p>
+                    </div>
+                  </div>
+                  <div class="col d-flex align-items-start">
+                    <svg class="bi me-3" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
+                    <div>
+                      <h3 class="fw-bold mb-0 fs-4 text-white">Michael Williams</h3>
+                      <p class="text-light">"Rafael es simplemente brillante en lo que hace. Su capacidad para comprender las necesidades del cliente y traducirlas en soluciones es impresionante. ¡Altamente recomendado!"</p>
+                    </div>
+                  </div>
+                  <div class="col d-flex align-items-start">
+                    <svg class="bi me-3" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
+                    <div>
+                      <h3 class="fw-bold mb-0 fs-4 text-white">Jessica Brown</h3>
+                      <p class="text-light">"¡Rafael es el mejor en su campo! Su atención al detalle y su habilidad para crear experiencias de usuario excepcionales son incomparables. ¡Gracias por tu excelente trabajo!"</p>
+                    </div>
+                  </div>
+                  <div class="col d-flex align-items-start">
+                    <svg class="bi me-3" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
+                    <div>
+                      <h3 class="fw-bold mb-0 fs-4 text-white">Daniel Garcia</h3>
+                      <p class="text-light">"Trabajar con Rafael fue una experiencia increíble. Su creatividad y profesionalismo son insuperables. ¡Recomendaría a Rafael a cualquiera que busque un diseñador web excepcional!"</p>
+                    </div>
+                  </div>
+                  <div class="col d-flex align-items-start">
+                    <svg class="bi me-3" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
+                    <div>
+                      <h3 class="fw-bold mb-0 fs-4 text-white">Sarah Martinez</h3>
+                      <p class="text-light">"¡Rafael es un verdadero profesional en su campo! Su dedicación y atención al detalle son incomparables. ¡Estoy extremadamente satisfecho con el resultado final de nuestro proyecto!"</p>
+                    </div>
+                  </div>
+                  <div class="col d-flex align-items-start">
+                    <svg class="bi me-3" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
+                    <div>
+                      <h3 class="fw-bold mb-0 fs-4 text-white">Amanda Taylor</h3>
+                      <p class="text-light">"¡Rafael es increíble! Su creatividad y habilidades técnicas son impresionantes. ¡No podríamos estar más felices con el resultado final de nuestro proyecto!"</p>
+                    </div>
+                  </div>
+                  <div class="col d-flex align-items-start">
+                    <svg class="bi me-3" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
+                    <div>
+                      <h3 class="fw-bold mb-0 fs-4 text-white">David Rodriguez</h3>
+                      <p class="text-light">"¡Trabajar con Rafael fue una experiencia increíble! Su atención al detalle y su habilidad para entender nuestras necesidades fueron excepcionales. ¡Altamente recomendado!"</p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </section>
     <section class="footer p-5 rounded-5 m-1 color-white">
         <div class="container">
             <footer class="py-3 my-4">
                 <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                <li class="nav-item"><a href="#" class="nav-link px-2 ">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 ">Features</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 ">Pricing</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 ">FAQs</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 ">About</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 ">Inicio</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 ">Portafolio</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 ">Servicios</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 ">Contacto</a></li>
                 </ul>
-                <p class="text-center text-secondary">© 2024 Company, Inc</p>
+                <p class="text-center text-secondary">© 2024 Tu Nombre</p>
             </footer>
         </div>
     </section>
     
     <!-- Incluye los scripts de Bootstrap y cualquier otro script JavaScript -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
