@@ -3,184 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Nombre - Portafolio</title>
+    <title>WooMasters - Tienda de Temas Bootstrap</title>
     <!-- Incluye los estilos de Bootstrap -->
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-black color-white">
-    <header class="d-flex justify-content-center py-3 bg-light">
-        <ul class="nav nav-pills rounded-5 bg-dark my-1">
-          <li class="nav-item "><a href="#" class="nav-link color-white"> <i class="bi bi-rocket-takeoff"></i> Boost</a></li>
-          <li class="nav-item "><a href="#" class="nav-link color-white"> <i class="bi bi-cash-coin"></i> Plans </a></li> 
-          <li class="nav-item "><a href="#" class="nav-link color-white"> <i class="bi bi-person-hearts"></i> Reviews</a></li>
-          <li class="nav-item "><a href="#about" class="nav-link color-white"> <i class="bi bi-person-circle"></i> About</a></li>
+<body class="bg-black p-1">
+  <div class="container-fluid bg-light rounded-5">
+    <!-- Encabezado -->
+    <div class="container">
+      <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom bg-transparent">
+        <div class="col-md-3 mb-2 mb-md-0">
+          <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+            <i class="bi bi-boxes"></i> <span class="fw-bold"> Woo</span>Masters
+          </a>
+        </div>
+  
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0"> 
+          <li><a href="#" class="nav-link text-info px-2">Temas</a></li>
+          <li><a href="#" class="nav-link text-info px-2">Planes</a></li>
+          <li><a href="#" class="nav-link text-info px-2">FAQ</a></li> 
         </ul>
-    </header>
-    <section class="m-0 p-5 bg-light rounded-5 rounded-top-0"> 
-        <div class="px-4 text-center py-5">
-            <i class="bi bi-award" style="font-size: 5rem;"></i>
-            <div class="container ">
-                <h1 class="display-4 fw-bold text-body-emphasis ">Elite designs, Guaranteed Success.</h1>
-            </div>
-            <div class="col-lg-8 mx-auto">
-                <p class="lead mb-4">Elevate your digital presence with elite designs guaranteed to drive success. Our expertly crafted websites combine cutting-edge aesthetics with seamless functionality, ensuring your brand stands out in today's competitive landscape. Trust in our expertise to amplify your online presence and unlock your business's full potential.</p>
-                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                    <form id="searchForm">
-                        <div class="input-group border border-5 border-dark-subtle rounded-5">
-                            <input class="form-control" type="text" id="url">
-                            <button id="searchBtn" class="btn" type="submit" aria-label="submit">
-                                <i class="bi bi-search"></i>
-                            </button>
-                        </div>
-                        <label for="url" class="form-label mt-2">Try Now! With your website url.</label>
-                    </form>                    
-                </div>
-            </div>
+  
+        <div class="col-md-3 text-end">
+          <button type="button" class="btn btn-outline-info me-2">Login</button>
+          <button type="button" class="btn btn-info text-white">Registrarse</button>
         </div>
-    </section>
-    <section id="about" class=" p-5">
-        <div class="container">
-            <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-              <h1 class="display-4 fw-normal text-white">Acerca de</h1>
-              <p class="fs-5 text-secondary">Soy un diseñador web con más de 7 años de experiencia, especializado en UX/UI, desarrollo front-end y diseño de productos.</p>
-            </div>
+      </header>
+    </div>
+    <!-- Hero Principal -->
+    <div class="px-4 pt-5 my-5 text-center ">
+      <h1 class="display-4 fw-bold text-body-emphasis">Diseños web que impulsan tu éxito online</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">¡Bienvenido a WooMasters! Encuentra la colección más amplia de temas premium diseñados específicamente para WordPress y WooCommerce. Nuestros temas no solo son estéticamente atractivos, sino que también están optimizados para una conversión máxima y una experiencia de usuario excepcional. Impulsa tu proyecto en línea con WooMasters y lleva tu presencia web al siguiente nivel.</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+          <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3">Empieza gratis ahora</button>        
         </div>
-    </section>
-    <main class="container p-5 bg-">
-        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-          <div class="col">
-            <div class="card mb-4 rounded-3 shadow-sm">
-              <div class="card-header py-3">
-                <h4 class="my-0 fw-normal">Free</h4>
-              </div>
-              <div class="card-body">
-                <h1 class="card-title pricing-card-title">$0<small class="text-body-secondary fw-light">/mo</small></h1>
-                <ul class="list-unstyled mt-3 mb-4">
-                  <li>10 users included</li>
-                  <li>2 GB of storage</li>
-                  <li>Email support</li>
-                  <li>Help center access</li>
-                </ul>
-                <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
-              </div>
-            </div>
+      </div>
+      <div class="overflow-hidden" style="max-height: 30vh;">
+        <div class="container ">
+          <img src="img/woocommerce-website-example.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Ejemplo de Temas Bootstrap" width="700" height="500" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container col-xxl-8 mx-auto text-white">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="img/multiples-websites.png" class="d-block img-fluid" alt="Example of Bootstrap Themes" >
+      </div>
+      <div class="col-lg-6">
+        <h3 class="display-5 fw-bold lh-1 mb-3">Potencia tu Presencia Web con Nuestros Temas Exclusivos</h3>
+        <p class="lead">Descubre una selección de temas premium diseñados para potenciar tu presencia en línea. Nuestros diseños están optimizados para WordPress y WooCommerce, ofreciendo una combinación perfecta de estética y funcionalidad. Convierte visitantes en clientes y lleva tu sitio web al siguiente nivel con nosotros.</p>        
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">          
+          <button type="button" class="btn btn-outline-info btn-lg px-4">Ver Plantillas</button>
+          <a href="#" class="btn btn-link">Ver Planes</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <!-- Planes de Membresía -->
+  <section class=" bg-dark rounded-5 p-5" id="planes">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+          <h1 class="display-4 fw-bold text-white-50">Planes de Membresía</h1>
+          <p class="fs-5 text-light">Explora nuestros planes diseñados para impulsar tu presencia en línea. Convierte tu sitio web en una obra maestra con acceso exclusivo a nuestra colección de temas premium. Desde soporte prioritario hasta actualizaciones regulares, cada plan está diseñado para brindarte la mejor experiencia posible. ¡Descubre el plan ideal para ti y desbloquea un mundo de posibilidades para tu negocio en línea!</p>
+        </div>
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-start">
+      <div class="col">
+        <div class="card border-0 bg-transparent mb-4 rounded-0 text-white">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Básico</h4>
           </div>
-          <div class="col">
-            <div class="card mb-4 rounded-3 shadow-sm">
-              <div class="card-header py-3">
-                <h4 class="my-0 fw-normal">Pro</h4>
-              </div>
-              <div class="card-body">
-                <h1 class="card-title pricing-card-title">$15<small class="text-body-secondary fw-light">/mo</small></h1>
-                <ul class="list-unstyled mt-3 mb-4">
-                  <li>20 users included</li>
-                  <li>10 GB of storage</li>
-                  <li>Priority email support</li>
-                  <li>Help center access</li>
-                </ul>
-                <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card mb-4 rounded-3 shadow-sm border-primary">
-              <div class="card-header py-3 text-bg-primary border-primary">
-                <h4 class="my-0 fw-normal">Enterprise</h4>
-              </div>
-              <div class="card-body">
-                <h1 class="card-title pricing-card-title">$29<small class="text-body-secondary fw-light">/mo</small></h1>
-                <ul class="list-unstyled mt-3 mb-4">
-                  <li>30 users included</li>
-                  <li>15 GB of storage</li>
-                  <li>Phone and email support</li>
-                  <li>Help center access</li>
-                </ul>
-                <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
-              </div>
-            </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$0<small class="text-white-50 fw-light">/mes</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Acceso a 12 temas gratuitos al año (uno al mes)</li>
+              <li>Soporte básico</li>
+              <li>Actualizaciones regulares</li>
+              <li>Compatibilidad con los últimos plugins</li>
+              <li>Documentación detallada</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-outline-info">Registrarse Gratis</button>
           </div>
         </div>
-    </main>
-    <section class="p-5">
-        <div class="container">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
-                <div class="col d-flex align-items-start">
-                  <svg class="bi me-3" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
-                  <div>
-                    <h3 class="fw-bold mb-0 fs-4 text-white">John Smith</h3>
-                    <p class="text-light">"Rafael hizo un trabajo excepcional en nuestro proyecto. Su enfoque meticuloso y creativo nos impresionó a todos. ¡Altamente recomendado!"</p>
-                  </div>
-                </div>
-                <div class="col d-flex align-items-start">
-                    <svg class="bi me-3" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
-                    <div>
-                      <h3 class="fw-bold mb-0 fs-4 text-white">Emily Johnson</h3>
-                      <p class="text-light">"¡Increíble trabajo de diseño! Rafael superó nuestras expectativas en todos los sentidos. Profesional, amigable y altamente competente."</p>
-                    </div>
-                  </div>
-                  <div class="col d-flex align-items-start">
-                    <svg class="bi me-3" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
-                    <div>
-                      <h3 class="fw-bold mb-0 fs-4 text-white">Michael Williams</h3>
-                      <p class="text-light">"Rafael es simplemente brillante en lo que hace. Su capacidad para comprender las necesidades del cliente y traducirlas en soluciones es impresionante. ¡Altamente recomendado!"</p>
-                    </div>
-                  </div>
-                  <div class="col d-flex align-items-start">
-                    <svg class="bi me-3" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
-                    <div>
-                      <h3 class="fw-bold mb-0 fs-4 text-white">Jessica Brown</h3>
-                      <p class="text-light">"¡Rafael es el mejor en su campo! Su atención al detalle y su habilidad para crear experiencias de usuario excepcionales son incomparables. ¡Gracias por tu excelente trabajo!"</p>
-                    </div>
-                  </div>
-                  <div class="col d-flex align-items-start">
-                    <svg class="bi me-3" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
-                    <div>
-                      <h3 class="fw-bold mb-0 fs-4 text-white">Daniel Garcia</h3>
-                      <p class="text-light">"Trabajar con Rafael fue una experiencia increíble. Su creatividad y profesionalismo son insuperables. ¡Recomendaría a Rafael a cualquiera que busque un diseñador web excepcional!"</p>
-                    </div>
-                  </div>
-                  <div class="col d-flex align-items-start">
-                    <svg class="bi me-3" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
-                    <div>
-                      <h3 class="fw-bold mb-0 fs-4 text-white">Sarah Martinez</h3>
-                      <p class="text-light">"¡Rafael es un verdadero profesional en su campo! Su dedicación y atención al detalle son incomparables. ¡Estoy extremadamente satisfecho con el resultado final de nuestro proyecto!"</p>
-                    </div>
-                  </div>
-                  <div class="col d-flex align-items-start">
-                    <svg class="bi me-3" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
-                    <div>
-                      <h3 class="fw-bold mb-0 fs-4 text-white">Amanda Taylor</h3>
-                      <p class="text-light">"¡Rafael es increíble! Su creatividad y habilidades técnicas son impresionantes. ¡No podríamos estar más felices con el resultado final de nuestro proyecto!"</p>
-                    </div>
-                  </div>
-                  <div class="col d-flex align-items-start">
-                    <svg class="bi me-3" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
-                    <div>
-                      <h3 class="fw-bold mb-0 fs-4 text-white">David Rodriguez</h3>
-                      <p class="text-light">"¡Trabajar con Rafael fue una experiencia increíble! Su atención al detalle y su habilidad para entender nuestras necesidades fueron excepcionales. ¡Altamente recomendado!"</p>
-                    </div>
-                  </div>
-            </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-0 border-0 border-start bg-transparent text-white ">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Mensual</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$15<small class="text-body-secondary fw-light">/mes</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Acceso ilimitado a todos los temas</li>
+              <li>Soporte prioritario</li>
+              <li>Actualizaciones regulares</li>
+              <li>Compatibilidad con los últimos plugins</li>
+              <li>Documentación detallada</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-outline-info">Obtener Premium</button>
+          </div>
         </div>
-    </section>
-    <section class="footer p-5 rounded-5 m-1 color-white">
-        <div class="container">
-            <footer class="py-3 my-4">
-                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                <li class="nav-item"><a href="#" class="nav-link px-2 ">Inicio</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 ">Portafolio</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 ">Servicios</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 ">Contacto</a></li>
-                </ul>
-                <p class="text-center text-secondary">© 2024 Tu Nombre</p>
-            </footer>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-info">
+          <div class="card-header py-3 text-bg-info border-info">
+            <h4 class="my-0 fw-normal text-white">Anual</h4>
+          </div>
+          <div class="card-body bg-white bg-gradient">
+            <h1 class="card-title pricing-card-title">$150<small class="text-body-secondary fw-light">/año</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li><i class="bi bi-check text-success"></i>Acceso ilimitado a todos los temas</li>
+              <li><i class="bi bi-check text-success"></i>Soporte prioritario 24/7</li>
+              <li><i class="bi bi-check text-success"></i>Consultoría personalizada</li>
+              <li><i class="bi bi-check text-success"></i>Actualizaciones regulares</li>
+              <li><i class="bi bi-check text-success"></i>Compatibilidad con los últimos plugins</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-info text-white"><i class="bi bi-person-video3"></i> Contactar</button>
+          </div>
         </div>
-    </section>
-    
-    <!-- Incluye los scripts de Bootstrap y cualquier otro script JavaScript -->
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="app.js"></script>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Pie de Página -->
+  <section class="footer p-5 rounded-5 m-1 color-white">
+    <div class="container">
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3" >
+          <li class="nav-item"><a href="#" class="nav-link text-info px-2">Temas</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-info px-2">Planes</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-info px-2">Servicios</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-info px-2">Contacto</a></li>
+        </ul>
+        <p class="text-center text-secondary">© 2024 WooMasters </p>
+      </footer>
+    </div>
+  </section>
+  
+  <!-- Scripts -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
