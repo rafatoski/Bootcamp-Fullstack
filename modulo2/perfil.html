@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio HTML </title>
+    <style>
+        :root{
+            --Negro: hsl(0,0%,8%);
+            --GrisOscuro: hsl(0,0%,15%);
+            --Gris: hsl(0,0%,20%);
+            --Blanco:hsl(0,0%,100%);
+            --Verde: hsl(140, 86%, 49%);
+
+        }
+        body{
+            background-color: var(--Negro);
+            color: var(--Blanco);
+            font-size: 16px;
+            font-family: system-ui, 'Inter', sans-serif;
+        }
+        .container {
+            display: grid;
+            justify-content: center;
+            text-align: center;
+        }
+        .card{
+            position: relative;
+            top: 20%;
+            background-color: var(--Gris);
+            padding: 1.5rem;
+            border-radius: .8rem;
+        }
+        .avatar{
+            border-radius: 100%;
+            display: block;
+            width: 220px;
+            height: 220px;
+            margin: 0 auto;
+        }
+        .cta{
+            display: flex;
+            flex-direction: column;
+            gap: .3em;
+        }
+
+        .btn{
+            padding: 3px 8px;
+            border-radius: 5px;
+            background-color: var(--Verde);
+            color:var(--GrisOscuro);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://avatars.githubusercontent.com/u/12383610?v=4" alt="Foto Github" class="avatar">
+            </div>
+            <div class="card-body">
+                <h2 class="title">Rafael Castillo </h2>
+                <h3 class="subtitle">Cali, Colombia</h3>
+                <p class="description">"Front-End developer and UX/UI Designer."</p>
+                <div class="cta">
+                    <button class="btn">Facebook</button>
+                    <button class="btn">Instagram</button>
+                    <button class="btn">Tik Tok</button>
+                    <button class="btn">GitHub</button>
+                    <button class="btn">linkedIn</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
