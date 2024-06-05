@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card con HTML y CSS</title>
+    <style>
+
+        body{
+            margin:0;
+            padding: 0;
+            font-family: system-ui, -apple-system, 'Inter', sans-serif;
+            font-size: 16px;
+            background-color: black;
+        }
+        .container{
+            width: 100%;            
+            text-align: center;
+        }
+        article{
+            position:relative;
+            width: 250px;
+            height: auto;
+            margin: 0 auto;
+            margin-top: 5%;
+            transition: all ease .3s;
+            cursor: pointer;
+        }
+        article img:first-child {
+            box-shadow: 0 60px 60px -60px rgba(0,30,255,0.5);
+            border-radius: 4px;
+            object-fit: cover;
+            width: 100%;
+        }
+        article img:last-child {
+            position: absolute;
+            width: 200px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            transform: translateY(25%);
+            transition: .3s ease;
+            opacity: 0;
+        }
+        article:hover {
+            transform: perspective(250px)
+            rotateX(10deg)
+            translateY(-5%)
+            translateZ(0);
+        }
+        article::before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(
+                to bottom, transparent 10%, 
+                rgba(0,0,0,.5) 50%, 
+                rgba(0,0,0,1) 95%
+            );
+            transition: all .3s ease;
+            opacity: 0;
+        }
+        article:hover::before{
+            opacity: 1;
+        } article:hover img:last-child{
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+
+    <main>
+        <div class="container">
+            <article>
+                <img src="https://i.blogs.es/617177/super-mario-bros-pelicula-mario/450_1000.webp" alt="Poster Pelicula de Mario Bross">
+                <img src="https://supermario3dworld.nintendo.com/assets/img/play-together/characters/mario.png" alt="Mario 3d">
+            </article>
+        </div>
+    </main>
+    
+</body>
+</html>
