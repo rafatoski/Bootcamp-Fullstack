@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Socket.IO chat</title>
+    <style>
+        body {
+            margin: 0;
+            padding-bottom: 3rem;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+ 
+        #form {
+            background: rgba(0, 0, 0, 0.15);
+            padding: 0.25rem;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            height: 3rem;
+            box-sizing: border-box;
+            backdrop-filter: blur(10px);
+        }
+ 
+        #input {
+            border: none;
+            padding: 0 1rem;
+            flex-grow: 1;
+            border-radius: 2rem;
+            margin: 0.25rem;
+        }
+ 
+        #input:focus {
+            outline: none;
+        }
+ 
+        #form>button {
+            background: #333;
+            border: none;
+            padding: 0 1rem;
+            margin: 0.25rem;
+            border-radius: 3px;
+            outline: none;
+            color: #fff;
+        }
+ 
+        #messages {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+ 
+        #messages>li {
+            padding: 0.5rem 1rem;
+        }
+ 
+        #messages>li:nth-child(odd) {
+            background: #efefef;
+        }
+    </style>
+</head>
+ 
+<body>
+    <ul id="messages"></ul>
+    <form id="form" action="">
+        <input id="input" autocomplete="off" /><button>Send</button>
+    </form>
+ 
+    <img id="spiderman" src="https://icons.veryicon.com/png/o/movie--tv/movie-hero-icon/spider-man-5.png" width="150px" />
+    <button onclick="mover(1);">1</button><button onclick="mover(2);">2</button><button onclick="mover(3);">3</button><button onclick="mover(4);">4</button>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+   
+        var x = 0;
+        var y = 0;
+       
+        function mover(tipo) {
+            var spiderman = document.getElementById("spiderman");
+            var step = 20; // Cantidad de píxeles a mover por cada pulsación
+ 
+            switch(tipo) {
+                case 1: // Arriba
+                    y -= step;
+                    break;
+                case 2: // Abajo
+                    y += step;
+                    break;
+                case 3: // Izquierda
+                    x -= step;
+                    break;
+                case 4: // Derecha
+                    x += step;
+                    break;
+            }
+ 
+            spiderman.style.transform = `translate(${x}px, ${y}px)`;
+            var rect = spiderman.getBoundingClientRect();
+            const clientOffset = `${socket.id}-${counter++}`;
+            socket.emit('chat message', `${x},${y},${socket.id}`, clientOffset);
+        }
+        let counter = 0;
+ 
+        const socket = io({
+            auth: {
+                serverOffset: 0
+            },
+            ackTimeout: 10000,
+            retries: 3,
+        });
+ 
+ 
+ 
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const clientOffset = `${socket.id}-${counter++}`;
+            socket.emit('chat message', input.value, clientOffset);
+        });
+ 
+        socket.on('chat message', (msg, serverOffset) => {
+            var spiderman = document.getElementById("spiderman");
+            var posicion = msg.split(",");
+            console.log(posicion);
+            if(posicion[2] !== socket.id){
+                console.log(posicion[2],socket.id);
+                spiderman.style.transform = `translate(${parseInt(posicion[0])}px, ${parseInt(posicion[1])}px)`;
+            }
+            window.scrollTo(0, document.body.scrollHeight);
+            socket.auth.serverOffset = serverOffset;
+        });
+    </script>
+</body>
+ 
+</html>
