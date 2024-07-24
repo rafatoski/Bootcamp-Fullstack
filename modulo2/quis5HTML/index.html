@@ -7,34 +7,88 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Premios de Videojuegos 2024</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
+    <header>        
+        <nav class="navbar-inner-new">
+            <ul >
+                <li><a href="index.html">Premios</a></li>
                 <li><a href="categorias.html">Categorías</a></li>
+            </ul>
+            <a href="#" class="logo">GGPrizes</a>
+            <ul >
                 <li><a href="participantes.html">Participantes</a></li>
                 <li><a href="votacion.html">Votación</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
             </ul>
+            
+        <ul class="mobile-menu" style="display: none;">
+                <li><a href="#">MENU</a></li>
+        </ul>
         </nav>
     </header>
     <main>
-        <section>
-            <h2>Bienvenidos a los Premios de Videojuegos 2024</h2>
-            <p>Descubre los mejores juegos del año y vota por tus favoritos.</p>
-            <img src="imagenes/banner.jpg" alt="Premios de Videojuegos">
-        </section>
-        <section>
-            <h2>Video Introductorio</h2>
-            <video controls>
-                <source src="videos/intro.mp4" type="video/mp4">
-                Tu navegador no soporta la reproducción de videos.
-            </video>
+        <section  class="bento-grid">
+                <div class="item item1 cell-hero-home">
+                    <div class="hero-wrapper">
+                        <h1>Donde la grandeza en los videojuegos recibe su recompensa</h1>
+                    </div>
+                    <div class="text-hero-home">
+                        <img src="https://cdn.prod.website-files.com/602d59da29b66668b8758391/6564d9aec724ed9715365c66_avas_talents_hero_home.png" alt="Image" width="78">
+                        <div class="body-text">
+                            <p>Descubre los premios más épicos y destaca en el mundo de los videojuegos. ¡Haz que tu nombre sea recordado!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item2 cell-microchip">
+                    <div class="hero-wrapper">
+                        <h2>Premios Épicos para Videojuegos con Innovación</h2>
+                    </div>
+                    <div class="text">
+                        <p>Los mejores videojuegos compiten con hardware avanzado, elevando la experiencia de juego.</p>
+                    </div>
+                </div>
+                <div class="item card">
+                    <div class="card-img">
+                        <img src="https://www.hollywoodreporter.com/wp-content/uploads/2019/06/doom_eternal-publicity-h_2019.jpg?w=1296&h=730&crop=1" alt="Doom Eternal">
+                    </div>
+                    <div class="card-info">
+                        <h4>Mejor FPS</h4>
+                        <p>Reconocemos al mejor juego de disparos en primera persona, que ofrece acción y precisión excepcionales.</p>
+                    </div>
+                    <div class="card-btn">
+                        <a href="votacion.html" class="btn">Votar</a>
+                    </div>
+                </div>
+                <div class="item card">
+                    <div class="card-img">
+                        <img src="https://i0.wp.com/www.pcmrace.com/wp-content/uploads/2015/04/M2Ukmx.jpg" alt="">
+                    </div>
+                    <div class="card-info">
+                        <h4>Mejor RPG</h4>
+                        <p>Premiamos el mejor juego de rol que destaca por su narrativa profunda y personalización inmersiva.</p>
+                    </div>
+                    <div class="card-btn">
+                        <a href="votacion.html" class="btn">Votar</a>
+                    </div>
+                </div>
+                <div class="item card">
+                    <div class="card-img">
+                        <img src="https://i.ytimg.com/vi/aveMaSPplvE/maxresdefault.jpg" alt="">
+                    </div>
+                    <div class="card-info">
+                        <h4>Mejor Estrategia</h4>
+                        <p>Galardonamos al juego de estrategia que ofrece tácticas innovadoras y un desafío intelectual sin igual.</p>
+                    </div>
+                    <div class="card-btn">
+                        <a href="votacion.html" class="btn">Votar</a>
+                    </div>
+                </div>
+                <div class="item item4">Mejor de Acción</div>
+                <div class="item item5">Mejor de Deportes</div>
+                <div class="item item6">Mejor de Aventura Gráfica</div>
+                <div class="item item7">Mejor Independiente</div>         
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Premios de Videojuegos. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Premios de Videojuegos.  Contacto <a href="mailto:rafaelcastilloac8@gmail.com"> Contact  email </a></p>
     </footer>
     <script src="scripts.js"></script>
 </body>
