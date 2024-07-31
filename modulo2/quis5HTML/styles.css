@@ -131,6 +131,11 @@ footer a {
     text-decoration: none;
 }
 
+.item.card .card-btn a:hover {
+    background-color: #ccc;
+    color: #111;
+}
+
 .item1 { flex: 2 1 600px; }
 .item2 { flex: 1 1 400px; }
 .item3 { flex: 1 1 400px; }
@@ -255,8 +260,12 @@ footer a {
 }
 
 @media (max-width: 768px) {
-    nav ul {
+    nav {
         flex-direction: column;
+    }
+
+    nav ul{
+        display: none;
     }
 
     section {

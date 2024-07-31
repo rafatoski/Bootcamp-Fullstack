@@ -1,0 +1,76 @@
+<script>
+
+    // Switch 
+
+let color = 'rojo';
+
+switch(color) {
+    case 'rojo':
+        console.log ('El color es rojo');
+        break;
+        case 'verde':
+            console.log('el color es verde')
+            break;
+            case 'azul':
+                console.log('el color es azul')
+                break;
+                default:
+                    console.log('cualquier otro color')
+                    break;
+                }
+                
+                let botonEvento = document.getElementById('botonEvento');
+                // <!-- accion del click -->
+                botonEvento.addEventListener('click', () => {
+                    botonEvento.textContent = 'Clickeado';
+                });
+                </script>
+                
+                <button id="botonEvento"> Clickeame</button>
+
+<!-- creacion del boton -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .objeto {
+            width: 250px;
+            height: 250px;
+            background-color: pink;
+            border: 10px solid red;
+            border-radius: 20px;
+            margin: 50px auto;
+            text-align: center;
+            align-content: center;
+        }
+    </style>
+ </head>
+ <body>
+    
+     
+     <div id="objeto" class="objeto"> Hola </div>     
+     <script>
+        let objeto = document.getElementById('objeto');
+
+        objeto.addEventListener('mouseover', ()=> {
+            objeto.style.backgroundColor = 'yellow';
+        });
+
+        objeto.addEventListener('mouseout', ()=>{
+            objeto.style.backgroundColor = 'pink';
+        });
+        function saludar(saludo) {
+    return function(nombre) {
+        return saludo + ', ' + nombre;
+    };
+}
+
+const saludoEnEspañol = saludar('Hola');
+console.log(saludoEnEspañol('Pedro')); 
+        
+</script>
+</body>
+</html>
