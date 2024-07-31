@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Básica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .calculadora {
+            background-color: #000;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .pantalla {
+            background-color: #333;
+            color: white;
+            font-size: 2.5em;
+            text-align: right;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            display: block;
+        }
+        .botones {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 20px;
+            font-size: 1.5em;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        .operador {
+            background-color: #ff9500;
+        }
+        .operador:hover {
+            background-color: #ffaa33;
+        }
+        .igual {
+            background-color: #ff9500;
+            grid-column: span 2;
+            border-radius: 30px;
+        }
+        .igual:hover {
+            background-color: #ffaa33;
+        }
+    </style>
+</head>
+<body>
+    <main class="calculadora">
+        <output class="pantalla" id="pantalla">0</output>
+        <section class="botones">
+            <button onclick="limpiar()">AC</button>
+            <button onclick="cambiarSigno()">+/-</button>
+            <button onclick="porcentaje()">%</button>
+            <button class="operador" onclick="agregarOperador('/')">/</button>
+            <button onclick="agregarNumero('7')">7</button>
+            <button onclick="agregarNumero('8')">8</button>
+            <button onclick="agregarNumero('9')">9</button>
+            <button class="operador" onclick="agregarOperador('*')">×</button>
+            <button onclick="agregarNumero('4')">4</button>
+            <button onclick="agregarNumero('5')">5</button>
+            <button onclick="agregarNumero('6')">6</button>
+            <button class="operador" onclick="agregarOperador('-')">-</button>
+            <button onclick="agregarNumero('1')">1</button>
+            <button onclick="agregarNumero('2')">2</button>
+            <button onclick="agregarNumero('3')">3</button>
+            <button class="operador" onclick="agregarOperador('+')">+</button>
+            <button onclick="agregarNumero('0')">0</button>
+            <button onclick="agregarDecimal()">.</button>
+            <button class="igual" onclick="calcular()">=</button>
+        </section>
+    </main>
+
+    <script>
+        let valorActual = '0';
+        let operadorPendiente = null;
+        let valorAnterior = null;
+        const pantalla = document.getElementById('pantalla');
+
+        // Función para actualizar la pantalla
+        function actualizarPantalla() {
+            pantalla.textContent = valorActual;
+        }
+
+        // Función para agregar un número
+        function agregarNumero(numero) {
+            if (valorActual === '0') {
+                valorActual = numero;
+            } else {
+                valorActual += numero;
+            }
+            actualizarPantalla();
+        }
+
+        // Función para agregar un operador
+        function agregarOperador(operador) {
+            if (operadorPendiente !== null) {
+                calcular();
+            }
+            valorAnterior = valorActual;
+            valorActual = '0';
+            operadorPendiente = operador;
+        }
+
+        // Función para calcular el resultado
+        function calcular() {
+            if (operadorPendiente === null) return;
+            let resultado;
+            const anterior = parseFloat(valorAnterior);
+            const actual = parseFloat(valorActual);
+            switch (operadorPendiente) {
+                case '+':
+                    resultado = anterior + actual;
+                    break;
+                case '-':
+                    resultado = anterior - actual;
+                    break;
+                case '*':
+                    resultado = anterior * actual;
+                    break;
+                case '/':
+                    resultado = anterior / actual;
+                    break;
+            }
+            valorActual = resultado.toString();
+            operadorPendiente = null;
+            valorAnterior = null;
+            actualizarPantalla();
+        }
+
+        // Función para limpiar la calculadora
+        function limpiar() {
+            valorActual = '0';
+            operadorPendiente = null;
+            valorAnterior = null;
+            actualizarPantalla();
+        }
+
+        // Función para cambiar el signo del número
+        function cambiarSigno() {
+            valorActual = (parseFloat(valorActual) * -1).toString();
+            actualizarPantalla();
+        }
+
+        // Función para calcular el porcentaje
+        function porcentaje() {
+            valorActual = (parseFloat(valorActual) / 100).toString();
+            actualizarPantalla();
+        }
+
+        // Función para agregar el punto decimal
+        function agregarDecimal() {
+            if (!valorActual.includes('.')) {
+                valorActual += '.';
+                actualizarPantalla();
+            }
+        }
+    </script>
+</body>
+</html>
