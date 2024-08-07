@@ -21,13 +21,14 @@
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         .pantalla {
-            background-color: #333;
+            
             color: white;
-            font-size: 2.5em;
+            font-size: 4.5em;
+            font-weight: 300;
             text-align: right;
             padding: 10px;
             border-radius: 10px;
-            margin-bottom: 40px;
+            margin-top: 40px;
             display: block;
         }
         .botones {
@@ -35,12 +36,22 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 10px;
         }
+        .gridcol{
+            grid-column: span 2;
+            border-radius: 50px;
+            text-align: start;           
+            width: 100%;
+            padding-left: 30px;
+        }
         button {
-            background-color: #333;
+            background-color: #444;
             color: white;
             border: none;
+            font-weight: 400;
             padding: 20px;
-            font-size: 1.5em;
+            width: 80px;
+            height: 80px;
+            font-size: 1.7em;
             border-radius: 50%;
             cursor: pointer;
             transition: background-color 0.3s;
@@ -56,11 +67,18 @@
         }
         .igual {
             background-color: #ff9500;
-            grid-column: span 2;
-            border-radius: 30px;
+            grid-column: span 1;
+            border-radius: 50px;
+            
         }
         .igual:hover {
             background-color: #ffaa33;
+        }
+
+        .gray-color{
+            background-color: #aaa;
+            color: #000;
+            font-weight: 600;
         }
     </style>
 </head>
@@ -68,9 +86,9 @@
     <main class="calculadora">
         <output class="pantalla" id="pantalla">0</output>
         <section class="botones">
-            <button onclick="limpiar()">AC</button>
-            <button onclick="cambiarSigno()">+/-</button>
-            <button onclick="porcentaje()">%</button>
+            <button class="gray-color" onclick="limpiar()">AC</button>
+            <button class="gray-color" onclick="cambiarSigno()">+/-</button>
+            <button class="gray-color" onclick="porcentaje()">%</button>
             <button class="operador" onclick="agregarOperador('/')">/</button>
             <button onclick="agregarNumero('7')">7</button>
             <button onclick="agregarNumero('8')">8</button>
@@ -84,8 +102,8 @@
             <button onclick="agregarNumero('2')">2</button>
             <button onclick="agregarNumero('3')">3</button>
             <button class="operador" onclick="agregarOperador('+')">+</button>
-            <button onclick="agregarNumero('0')">0</button>
-            <button onclick="agregarDecimal()">.</button>
+            <button class="gridcol" onclick="agregarNumero('0')">0</button>
+            <button onclick="agregarDecimal()">,</button>
             <button class="igual" onclick="calcular()">=</button>
         </section>
     </main>
