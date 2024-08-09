@@ -35,3 +35,25 @@ let suma = numeros.reduce(function(acumulador, numero){
 }, 0);
 
 console.log(suma);
+
+/* Encontrar un numero dentro del array  */
+
+let numeros3 = [1,2,3,4,5,6];
+
+let encontrar = numeros3.find( function(numero){
+    return numero >2
+});
+
+console.log(encontrar);
+
+/* Busque una cadena dentro del array */
+let nombrePersonas = [
+    {nombre: "armando", edad: 18},
+    {nombre: "jorge" , edad: 21},
+    {nombre: "Luis" , edad: 23},
+    {nombre: "María" , edad: 12},
+    {nombre: "Carlos" , edad: 16}
+];
+
+let personaEncontrada = nombrePersonas.find(nombrePersonas => nombrePersonas.starstWith('L'));
+console.log(personaEncontrada)
