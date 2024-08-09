@@ -57,3 +57,20 @@ let nombrePersonas = [
 
 let personaEncontrada = nombrePersonas.find(nombrePersonas => nombrePersonas.starstWith('L'));
 console.log(personaEncontrada)
+
+/* push */
+
+const frutas = ['manzana','platano'];
+
+frutas.push('zanahoria');
+
+
+console.log(frutas);
+
+
+let numerosPares = [];
+for(let i=1; i<=10; i++){
+    if(i % 2 == 0){
+        numerosPares.push(i);
+    }
+}
