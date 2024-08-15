@@ -1,38 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metodos en Javascript</title>
+    <style>
+        body {background:url('https://www.texturex.com/wp-content/uploads/2018/03/fabric-texture-swirl-water-pattern-blue-aqua-cloth-desktop-wallpaper-6-1024x768.jpg') center;padding: 40px;}
+        main { font-family: 'Inter', sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;background-color: #fafafa; border: 10px solid #fff;border-radius: 20px; }
+        ul { list-style-type: none; padding: 0; }
+        li { background-color: #f0f0f0; margin: 5px 0; padding: 10px; border-radius: 5px; }
+        input, button  {padding: 10px 16px; border-radius: 5px;border: 2px solid darkslategrey;}
+        button {color: whitesmoke;background-color: rgb(100, 186, 243);cursor: pointer;}
+        button:hover{background-color: rgb(13, 86, 182);}
+    </style>
 </head>
+
 <body>
-    <nav>
-        <h1>Ejercicios</h1>
-        <p>Agregue a continuación la lista de sus ejercicios favoritos</p>
-    </nav>
+   
     <main>
-        <button id="agregarBtn" type="button">Agregar elemento</button>
-        <input type="text" id="inputTexto" placeholder="Escrbe algo">
+    
+        <h1>Mi Registro de hidratacion</h1>
+        <p>Agregue a continuación un registro por cada vez que tomas un vaso de agua (250ml)</p>
+    
+        <button id="agregarBtn" type="button">Registrar vaso de agua</button>
         <ul id="list"></ul>
     </main>
 
     <script>
         /* variables para interactuar con el usuario */
-        let inputTexto = document.getElementById('inputTexto');
-        const agregarBtn = document.getElementById('agregarBtn');
         const lista = document.getElementById('list');
+        const agregarBtn = document.getElementById('agregarBtn');
 
         /* funcion para agregar apendice con el texto del usuario  */
-        function agreagarElemento(){
-            if(inputTexto.value.trim() !== ''){
-                const nuevoElemento = document.createElement('li');
-                nuevoElemento.textContent = inputTexto.value;
-                lista.appendChild(nuevoElemento);
-                inputTexto.value = ''; /* limpia el campo del texto*/
-            }
+        function agreagarElemento() {
+            const nuevoElemento = document.createElement('li');
+            nuevoElemento.textContent = 'Vaso de agua (250ml) tomado';
+            lista.appendChild(nuevoElemento);
+            
         }
         /* disparador por evento */
-        agregarBtn.addEventListener('click' , agreagarElemento);
+        agregarBtn.addEventListener('click', agreagarElemento);
     </script>
 </body>
+
 </html>

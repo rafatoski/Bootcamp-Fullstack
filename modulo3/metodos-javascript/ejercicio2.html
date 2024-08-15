@@ -1,30 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 2</title>
+    <style>
+        body {background:url('https://cdn4.vectorstock.com/i/1000x1000/55/63/0011-sport-pattern-vector-45325563.jpg') #666;padding: 40px;}
+        main { font-family: 'Inter', sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;background-color: #fafafa; border: 10px solid #fff;border-radius: 20px; }
+        ul { list-style-type: none; padding: 0; }
+        li { background-color: #f0f0f0; margin: 5px 0; padding: 10px; border-radius: 5px; }
+        input, button  {padding: 10px 16px; border-radius: 5px;border: 2px solid darkslategrey;}
+        button {color: whitesmoke;background-color: black;cursor: pointer;}
+        button:hover{background-color: darkslategray;}
+    </style>
 </head>
+
 <body>
-    <input type="text" id="inputTexto" placeholder="Escribe algo">
-    <button id="agregarBtn">Agregar elemento</button>
-    <ul id="lista"></ul>
+    <main>
+        <h1>Top Notch Exercises</h1>
+        <p>Add the best techniques and exercises below: </p>
+        <input type="text" id="inputTexto" placeholder="Write your favorite ">
+        <button id="agregarBtn">Add Exercise </button>
+        <ul id="lista"></ul>
+    </main>
 
     <script>
-        const inputTexto = document.getElementById('inputTexto');
-const agregarBtn = document.getElementById('agregarBtn');
-const lista = document.getElementById('lista');
+        let inputTexto = document.getElementById('inputTexto');
+        const agregarBtn = document.getElementById('agregarBtn');
+        const lista = document.getElementById('lista');
 
-function agregarElemento() {
-    if (inputTexto.value.trim() !== '') {
-        const nuevoElemento = document.createElement('li');
-        nuevoElemento.textContent = inputTexto.value;
-        lista.appendChild(nuevoElemento);
-        inputTexto.value = ''; // Limpia el campo de entrada
-    }
-}
+        function agregarElemento() {
+            if (inputTexto.value.trim() !== '') {
+                const nuevoElemento = document.createElement('li');
+                nuevoElemento.textContent = '💪'+ inputTexto.value;
+                lista.appendChild(nuevoElemento);
+                inputTexto.value = ''; // Limpia el campo de entrada
+            }
+        }
 
-agregarBtn.addEventListener('click', agregarElemento);
+        agregarBtn.addEventListener('click', agregarElemento);
     </script>
 </body>
+
 </html>
