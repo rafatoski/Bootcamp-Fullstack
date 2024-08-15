@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos en Javascript</title>
+</head>
+<body>
+    <nav>
+        <h1>Ejercicios</h1>
+        <p>Agregue a continuación la lista de sus ejercicios favoritos</p>
+    </nav>
+    <main>
+        <button id="agregarBtn" type="button">Agregar elemento</button>
+        <input type="text" id="inputTexto" placeholder="Escrbe algo">
+        <ul id="list"></ul>
+    </main>
+
+    <script>
+        /* variables para interactuar con el usuario */
+        let inputTexto = document.getElementById('inputTexto');
+        const agregarBtn = document.getElementById('agregarBtn');
+        const lista = document.getElementById('list');
+
+        /* funcion para agregar apendice con el texto del usuario  */
+        function agreagarElemento(){
+            if(inputTexto.value.trim() !== ''){
+                const nuevoElemento = document.createElement('li');
+                nuevoElemento.textContent = inputTexto.value;
+                lista.appendChild(nuevoElemento);
+                inputTexto.value = ''; /* limpia el campo del texto*/
+            }
+        }
+        /* disparador por evento */
+        agregarBtn.addEventListener('click' , agreagarElemento);
+    </script>
+</body>
+</html>
