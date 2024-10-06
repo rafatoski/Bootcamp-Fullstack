@@ -1,24 +1,37 @@
 const express = require('express');
-const Hotel = require('../models/Hotel');
 const router = express.Router();
+const Hotel = require('../models/Hotel');
+const Habitacion = require('../models/Habitacion');
 
-// Ruta para crear un hotel
-router.post('/hoteles', async (req, res) => {
+// Ruta para crear un nuevo hotel
+router.post('/hotels', async (req, res) => {
   try {
-    const hotel = await Hotel.create(req.body);
+    const { name, description, stars, location, photo } = req.body;
+    const hotel = await Hotel.create({ name, description, stars, location, photo });
     res.status(201).json(hotel);
   } catch (error) {
-    res.status(500).json({ error: 'Error creando el hotel' });
+    res.status(400).json({ error: error.message });
   }
 });
 
-// Ruta para obtener todos los hoteles
-router.get('/hoteles', async (req, res) => {
+// Ruta para listar todos los hoteles
+router.get('/hotels', async (req, res) => {
   try {
-    const hoteles = await Hotel.findAll();
-    res.json(hoteles);
+    const hotels = await Hotel.findAll();
+    res.status(200).json(hotels);
   } catch (error) {
-    res.status(500).json({ error: 'Error obteniendo los hoteles' });
+    res.status(400).json({ error: error.message });
+  }
+});
+
+// Ruta para crear una nueva habitación
+router.post('/habitaciones', async (req, res) => {
+  try {
+    const { name, number, capacity, beds, description, photo, hotelId } = req.body;
+    const habitacion = await Habitacion.create({ name, number, capacity, beds, description, photo, HotelId: hotelId });
+    res.status(201).json(habitacion);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
   }
 });
 

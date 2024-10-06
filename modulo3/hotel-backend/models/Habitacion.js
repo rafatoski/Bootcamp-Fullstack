@@ -11,7 +11,7 @@ const Habitacion = sequelize.define('Habitacion', {
   photo: { type: DataTypes.STRING }
 });
 
-// Relaciones un hotel tiene muchas habitaciones
+// Relaciones
 Hotel.hasMany(Habitacion);
 Habitacion.belongsTo(Hotel);
 
