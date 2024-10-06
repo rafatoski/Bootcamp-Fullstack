@@ -1,0 +1,5 @@
+DB_USER=Rafa
+DB_PASSWORD=postgres12345
+DB_NAME=hoteleria_db
+DB_HOST=localhost
+DB_PORT=5432
