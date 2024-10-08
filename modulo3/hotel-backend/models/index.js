@@ -14,12 +14,9 @@ const models = {
   Habitacion: Habitacion,
 };
 
-// Configuración de asociaciones
-Object.keys(models).forEach(modelName => {
-  if (models[modelName].associate) {
-    models[modelName].associate(models);
-  }
-});
+// Asociaciones
+Hotel.hasMany(Habitacion, { foreignKey: 'hotelId' });
+Habitacion.belongsTo(Hotel, { foreignKey: 'hotelId' });
 
 // Sincronización de la base de datos
 sequelize.sync()

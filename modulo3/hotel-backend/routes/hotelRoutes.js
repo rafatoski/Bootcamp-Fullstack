@@ -24,6 +24,18 @@ router.get('/hotels', async (req, res) => {
   }
 });
 
+// Ruta para obtener las habitaciones de un hotel específico
+router.get('/hotels/:hotelId/habitaciones', async (req, res) => {
+  try {
+    const { hotelId } = req.params;
+    const habitaciones = await Habitacion.findAll({ where: { hotelId } });
+    res.status(200).json(habitaciones);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+});
+
+
 // Ruta para crear una nueva habitación
 router.post('/habitaciones', async (req, res) => {
   try {
