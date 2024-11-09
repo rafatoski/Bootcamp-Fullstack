@@ -1,6 +1,7 @@
 import User from '../models/user.model.js';
 import bcrypt from 'bcryptjs';
 import { createAccessToken } from '../libs/jwt.js';
+import userModel from '../models/user.model.js';
 
 // Controlador para registrar un nuevo usuario
 export const register = async (req, res) => {
@@ -90,9 +91,9 @@ export const logout = (req, res) => {
 };
 
 // Controlador para obtener el perfil del usuario
-export const profile = async (req, res) => {
-    const userFound = await User.findById(req.user.id)
-    if (!userFound) return res.status(400).json({ message: "User not found" });
+export const profile = async  (req, res) => {    
+    const userFound =await User.findById(req.user.id)
+    if(!userFound) return res.status(400).json({message: "user not found"});
 
     return res.json({
         id: userFound._id,
@@ -101,6 +102,5 @@ export const profile = async (req, res) => {
         createdAt: userFound.createdAt,
         updatedAt: userFound.updatedAt,
     })
-
     res.send('Profile'); // Responde con un mensaje simple por ahora
 };
